@@ -36,6 +36,7 @@ Subsequently, we replaced the 'Age' column for these three columns where if the 
 ### Code used to categorize features
 
 <img width="318" alt="image" src="https://github.com/user-attachments/assets/27fc8094-a5de-4b3f-9574-0db5201473ac" />
+
 <img width="420" alt="image" src="https://github.com/user-attachments/assets/02c43d4f-ad56-4072-9e1a-9fd4b5b02175" />
 
 ## Results
