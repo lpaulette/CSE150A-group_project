@@ -4,7 +4,8 @@ Notebook: https://colab.research.google.com/drive/18eC4kIxlNfqhwCORhM1Qsca9e1E-A
 
 Dataset: https://www.kaggle.com/datasets/asinow/schizohealth-dataset
 
-Our probabilistic agent will decide whether a patient should be put on suicide watch based on the probability that they will attempt suicide given their medical history. It will be a model-based agent. Its PEAS are:
+Our probabilistic agent will decide whether a patient should be put on suicide watch based on the probability that they will attempt suicide given their medical history. It will be a model-based agent.
+### PEAS
  - Performance Measure: prediction accuracy based on historical data.
  - Environment: a hospital, or psychiatrist/doctor’s office
  - Actuators: decision of committing a patient to suicide watch based on likelihood of a suicide attempt.
