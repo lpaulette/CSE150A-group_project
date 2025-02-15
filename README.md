@@ -1,6 +1,6 @@
 ## Abstract
 
-Link to notebook: https://colab.research.google.com/drive/18eC4kIxlNfqhwCORhM1Qsca9e1E-A3tj?usp=sharing
+Notebook: https://colab.research.google.com/drive/18eC4kIxlNfqhwCORhM1Qsca9e1E-A3tj?usp=sharing
 
 Dataset: https://www.kaggle.com/datasets/asinow/schizohealth-dataset
 
