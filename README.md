@@ -38,7 +38,7 @@ Subsequently, we replaced the 'Age' column for these three columns where if the 
 
 ## What's next
 
-- Maybe add weights to certain features.
+- Maybe add weights to certain features depending on how much they affect the probability of a suicide attempt.
 - Further categorize non-binary features.
 - Make multiple noisy-ORs models for demographic features, medical history features, and psychosocial features.
 
