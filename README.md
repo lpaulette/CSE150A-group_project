@@ -4,7 +4,8 @@ Notebook: https://colab.research.google.com/drive/18eC4kIxlNfqhwCORhM1Qsca9e1E-A
 
 Dataset: https://www.kaggle.com/datasets/asinow/schizohealth-dataset
 
-Our probabilistic agent will decide whether a patient should be put on suicide watch based on the probability that they will attempt suicide given their medical history. It will be a model-based agent.
+It will be a model-based agent. Our probabilistic agent will decide whether a patient should be put on suicide watch based on the probability that they will attempt suicide given their medical history. Specifically, if P(Y = 1 | X_1, X_2, ..., X_n) > 60%, the agent will decide to put the patient on suicide watch.
+
 ### PEAS
  - Performance Measure: prediction accuracy based on historical data.
  - Environment: a hospital, or psychiatrist/doctor’s office
@@ -12,7 +13,9 @@ Our probabilistic agent will decide whether a patient should be put on suicide w
 Likely: if P(suicide attempt) > 60%, then: commit patient
  - Sensors: Schizophrenia diagnosis, age, gender, income level, employment status, disease duration, number of hospitalizations and substance use.
 
-   Our agent is set up with a Noisy-OR probabilistic model. Dependencies are set as followed:
+### Probabilistic model
+
+Our agent is set up with a Noisy-OR probabilistic model. Dependencies are set as followed:
    
 ![image1 (1)](https://github.com/user-attachments/assets/4f718e4b-6895-4e55-8e73-4bef5070c27c)
 
