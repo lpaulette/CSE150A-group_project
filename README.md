@@ -12,6 +12,7 @@ Likely: if P(suicide attempt) > 60%, then: commit patient
  - Sensors: Schizophrenia diagnosis, age, gender, income level, employment status, disease duration, number of hospitalizations and substance use.
 
    Our agent is set up with a Noisy-OR probabilistic model. Dependencies are set as followed:
+   
 ![image1 (1)](https://github.com/user-attachments/assets/4f718e4b-6895-4e55-8e73-4bef5070c27c)
 
 ## Description of dataset
