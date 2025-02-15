@@ -20,7 +20,7 @@ This dataset is a collection of demographic, clinical and psychosocial history i
 
 ## Methods
 
-We used the EM algorithm that's in HW3 to calculate the independent probability  x_i values for each cause.
+We used the EM algorithm that's in HW3 to calculate the independent probability  p_i  for each feature x_i.
 
 ## Challenges
 We had to divide certain features into categories to turn them into binary variables. Specifically, these features were age, education, marital status, occupation, years with the disease, number of hospitalizations, medication adherence, social support, level of stress.
