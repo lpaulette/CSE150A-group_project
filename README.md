@@ -41,7 +41,7 @@ Subsequently, we replaced the 'Age' column for these three columns where if the 
 
 ## Results
 
-We created a test function that will get the probability of a suicide attempt based on the given features. <br>
+We created a test function that will get the probability of a suicide attempt based on a patient's history. <br>
 
 <img width="542" alt="image" src="https://github.com/user-attachments/assets/1aa458a9-532b-430b-a076-8c1005739b5e" /> <br>
 
