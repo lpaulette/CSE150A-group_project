@@ -41,6 +41,29 @@ Subsequently, we replaced the 'Age' column for these three columns where if the 
 
 ## Results
 
+We created a test function that will get the probability of a suicide attempt based on the given features. <br>
+
+<img width="542" alt="image" src="https://github.com/user-attachments/assets/1aa458a9-532b-430b-a076-8c1005739b5e" /> <br>
+
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/6e78a989-c2a3-45c7-8606-9364864102d8" /> <br>
+
+Based on these tests, men with schizophrenia are more likely to attempt suicide than women. The diagnosis of schizophrenia also affects the likelihood severely (more than 3 times). <br>
+
+We also testes based on marital status. <br> 
+
+<img width="298" alt="image" src="https://github.com/user-attachments/assets/792f487b-467d-4ea4-b41d-f9e76372ef51" /> <br>
+
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/bae58eae-2667-4716-8ffa-e0c8f7442bd3" /> <br>
+
+Based on these results, divorced men are the most likely to attempt suicide.
+
+
+
+
+
+
+
+
 ## What's next
 
 - Maybe add weights to certain features depending on how much they affect the probability of a suicide attempt.
