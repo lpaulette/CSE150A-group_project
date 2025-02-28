@@ -19,6 +19,10 @@ Our agent is set up with a Noisy-OR probabilistic model. Dependencies are set as
    
 ![image1 (1)](https://github.com/user-attachments/assets/4f718e4b-6895-4e55-8e73-4bef5070c27c)
 
+
+## Description of dataset
+This dataset is a collection of demographic, clinical and psychosocial history information from schizophrenia patients. We decided to use our probabilistic agent to analyze how the probability of the 'Suicide Attempt' feature is affected by the rest of the features in the dataset ('Diagnosis', 'Gender', 'Income level', etc.).
+
 The variables we're considernig are as follows:
  - Age - patient's age between 18 and 80 years old.
  - Gender - 0: Female, 1: Male.
@@ -35,9 +39,6 @@ The variables we're considernig are as follows:
  - Stress factors - 0: Low, 1: Medium, 2: High.
  - Social support - 0: Low, 1: Medium, 2: High.
  - Medication adherence - 0: Poor, 1: Moderate, 2: Good.
-
-## Description of dataset
-This dataset is a collection of demographic, clinical and psychosocial history information from schizophrenia patients. We decided to use our probabilistic agent to analyze how the probability of the 'Suicide Attempt' feature is affected by the rest of the features in the dataset ('Diagnosis', 'Gender', 'Income level', etc.).
 
 ## Methods
 
