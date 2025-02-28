@@ -47,39 +47,39 @@ We used the EM algorithm that's in HW3 to calculate the independent probability 
 ## Challenges
 We had to divide certain features into categories to turn them into binary variables. Specifically, these features were:
 - Age - divided into 3 binary variables ->
- - age_18_30 - 1: patient is between 18 to 30 years old, 0: else.
- - age_31_50 - 1: patiens is between 31 to 50 years old, 0: else.
- - age_51_80 - 1: patient is between 51 to 80 years old, 0: else.
+  - age_18_30 - 1: patient is between 18 to 30 years old, 0: else.
+  - age_31_50 - 1: patiens is between 31 to 50 years old, 0: else.
+  - age_51_80 - 1: patient is between 51 to 80 years old, 0: else.
 - Education - divided into 5 binary variables ->
- - primary - 1: patient only reached primary school, 0: else
- - middle_school - 1: patient only reached middle school, 0: else
- - highschool - 1: patient only reached highschool, 0: else 
- - university - 1: patient only reached university, 0: else
- - postgrad - 1: patient reached postgrad, 0: else
+  - primary - 1: patient only reached primary school, 0: else
+  - middle_school - 1: patient only reached middle school, 0: else
+  - highschool - 1: patient only reached highschool, 0: else 
+  - university - 1: patient only reached university, 0: else
+  - postgrad - 1: patient reached postgrad, 0: else
 - Marital status - divided into 4 binary variables ->
- - single - 1: patient is currently single, 0: else.
- - married - 1: patient is currently married, 0: else.
- - divorced - 1: patient is currently divorced, 0: else.
- - widowed - 1: patient is currently widowed, 0: else.
+  - single - 1: patient is currently single, 0: else.
+  - married - 1: patient is currently married, 0: else.
+  - divorced - 1: patient is currently divorced, 0: else.
+  - widowed - 1: patient is currently widowed, 0: else.
 - Occupation - divided into 4 binary variables ->
- - unemployed - 1: patient is currently unemployed, 0: else.
- - employed - 1: patient is currently employed, 0: else.
- - retired - 1: patient is currently retired, 0: else.
- - student -  1: patient is currently a student, 0: else.
+  - unemployed - 1: patient is currently unemployed, 0: else.
+  - employed - 1: patient is currently employed, 0: else.
+  - retired - 1: patient is currently retired, 0: else.
+  - student -  1: patient is currently a student, 0: else.
 - Years with the disease - divided into 4 binary variables ->
- -  0_to_5_with_disease - 1: patients has had schizophrenia for 0 to 5 years, 0: else.
- -  6_to_15_with_disease - 1: patients has had schizophrenia for 6 to 15 years, 0: else.
- -  16_to_30_with_disease - 1: patients has had schizophrenia for 16 to 30 years, 0: else.
- -  31_to_40_with_disease - 1: patients has had schizophrenia for 31 to 40 years, 0: else.
+  -  0_to_5_with_disease - 1: patients has had schizophrenia for 0 to 5 years, 0: else.
+  -  6_to_15_with_disease - 1: patients has had schizophrenia for 6 to 15 years, 0: else.
+  -  16_to_30_with_disease - 1: patients has had schizophrenia for 16 to 30 years, 0: else.
+  -  31_to_40_with_disease - 1: patients has had schizophrenia for 31 to 40 years, 0: else.
 - Number of hospitalizations - divided into 2 binary variables ->
- - less_than_5_hospitalizations - 1: patient has had less than 5 hospitalizations, 0: else.
- - more_than_5_hospitalizations - 1: patient has had more than 5 hospitalizations, 0: else.
+  - less_than_5_hospitalizations - 1: patient has had less than 5 hospitalizations, 0: else.
+  - more_than_5_hospitalizations - 1: patient has had more than 5 hospitalizations, 0: else.
 - Medication adherence - changed to 1 binary variable ->
- -  low_medication_adherence - 1: patient has low medication adherence, 0: else.
+  -  low_medication_adherence - 1: patient has low medication adherence, 0: else.
 - Social support - changed to 1 binary variable ->
- - Social_support - 1: patient has any amount of social support, 0: patient has no social support.  
+  - Social_support - 1: patient has any amount of social support, 0: patient has no social support.  
 - Level of stress - changed to 1 binary variable ->
- - High_stress - 1: patient has high levels of stress, 0: patient has low or medium levels of stress.
+  - High_stress - 1: patient has high levels of stress, 0: patient has low or medium levels of stress.
 
 Example: age ranges from 18-80 years old. We created three cause nodes for three age ranges: {[18-30], [30, 50], [50, 80]}.
 Subsequently, we replaced the 'Age' column for these three columns where if the patient is 20 years old, 'age_18_30' = 1, 'age_31_50' = 0, and 'age_51_80' = 0.
