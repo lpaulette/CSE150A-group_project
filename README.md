@@ -145,13 +145,13 @@ A 60% threshold has the best accuracy, since for anything lower than that the ac
 
 <img width="402" alt="image" src="https://github.com/user-attachments/assets/edf57a60-8fc1-45c3-845e-02b322e07e5e" /> <br>
 
-Due to the serious consequences of having missed cases of suicide attempts, we don't mind sacrificing a low precision for a high recall score. In other words, we are more worried aboutnot putting high-risk individuals in suicide watch. We have the following measurements: <br>
+Due to the serious consequences of having missed cases of suicide attempts, we don't mind sacrificing a low precision for a high recall score. In other words, we are more worried about not putting high-risk individuals in suicide watch. We have the following measurements: <br>
 - 30% threshold, we get a recall score of 100% and a precision of 8.84%
 - 40% threshold gives recall of 100% and precision of 8.87%
 - 60% threshold gives recall of 100% and precision of 14.7%
 - 70% threshold gives recall of 99.3% and precision of 27.34%
 
-A 60% threshold is the threshols with the highest precision that has a recall of 100%, which is ideal for this context. Thus, we decide on a threshold of 60%.
+A 60% threshold is the threshold with the highest precision which has a recall of 100%, which is ideal for this context. Thus, we decide on a threshold of 60%.
 
 ## What's next
 
