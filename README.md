@@ -120,10 +120,9 @@ Firt we extracted the suicide attempt values from the data frame: <br>
 Secondly, for all the patient histories in the data set we calculate the probability of a suicide attempt. Then based on the agent's decision which, depends on a threshold, we claissify it as a 1 if the agent decides the patient should be put on suicide watch or 0 else.
 <img width="459" alt="image" src="https://github.com/user-attachments/assets/c5cd4fb0-974a-4c06-bad9-f6c0c1203e6c" />
 
+Then we compare the number of predictions our agen predicted correctly, and calculate the accuracy based on that number. <br>
 
-
-
-
+<img width="455" alt="image" src="https://github.com/user-attachments/assets/8d4858de-86ad-475b-8cf3-fc01fc629e88" />
 
 ## What's next
 
