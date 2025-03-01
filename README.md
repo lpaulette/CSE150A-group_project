@@ -121,14 +121,14 @@ Secondly, for all the patient histories in the data set we calculate the probabi
 
 <img width="459" alt="image" src="https://github.com/user-attachments/assets/c5cd4fb0-974a-4c06-bad9-f6c0c1203e6c" />
 
-Then we compare the number of predictions our agen predicted correctly, and calculate the accuracy based on that number. <br>
+Then we compare the number of predictions our agent predicted correctly, and calculate the accuracy based on that number. <br>
 
 <img width="455" alt="image" src="https://github.com/user-attachments/assets/8d4858de-86ad-475b-8cf3-fc01fc629e88" /> <br>
 
 With a threshold of 70%, the accuracy is as follows: <br>
 <img width="109" alt="image" src="https://github.com/user-attachments/assets/b8a64f74-027d-45cc-a03f-6b6943af28cc" />
 
-With athreshold of 60%: <br>
+With a threshold of 60%: <br>
 <img width="123" alt="image" src="https://github.com/user-attachments/assets/d39ce7cb-be94-42ed-9faa-6499539b662e" />
 
 With a threshold of 40%: <br>
