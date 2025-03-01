@@ -135,7 +135,9 @@ With a threshold of 40%: <br>
 <img width="98" alt="image" src="https://github.com/user-attachments/assets/e7805dde-a38f-4c82-8dd5-93a79f126d07" />
 
 With a threshold of 30%: <br>
-<img width="115" alt="image" src="https://github.com/user-attachments/assets/03e044ee-ce19-4e3f-89c0-945c8221ffd9" />
+<img width="115" alt="image" src="https://github.com/user-attachments/assets/03e044ee-ce19-4e3f-89c0-945c8221ffd9" /> <br>
+
+A 60% threshold has the best accuracy, since for anything lower than that the accuracy spikes down. <br>
 
 ## Precision vs Recall
 
@@ -143,8 +145,8 @@ With a threshold of 30%: <br>
 
 <img width="402" alt="image" src="https://github.com/user-attachments/assets/edf57a60-8fc1-45c3-845e-02b322e07e5e" /> <br>
 
-Due to the serious consequences of having missed cases of suicide attempts, we don't mind sacrificing a low precision for a high recall score. In the case of a 30% threshold, we get a recall score of 100% and a precision of 8.84%. Then we have the following measurements: <br>
-
+Due to the serious consequences of having missed cases of suicide attempts, we don't mind sacrificing a low precision for a high recall score. In other words, we are more worried aboutnot putting high-risk individuals in suicide watch. We have the following measurements: <br>
+- 30% threshold, we get a recall score of 100% and a precision of 8.84%
 - 40% threshold gives recall of 100% and precision of 8.87%
 - 60% threshold gives recall of 100% and precision of 14.7%
 - 70% threshold gives recall of 99.3% and precision of 27.34%
