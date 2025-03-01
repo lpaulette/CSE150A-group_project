@@ -110,7 +110,15 @@ We also testes based on marital status. <br>
 
 Based on these results, divorced men are the most likely to attempt suicide.
 
+## Accuracy
 
+We tested accuracy by calculating the probability of a suicide attempt for all the patients in the dataset and comparing them with the corresponding values of the suicide attempt feature.
+
+Firt we extracted the suicide attempt values from the data frame:
+<img width="469" alt="image" src="https://github.com/user-attachments/assets/eb27d45e-af0c-4d0c-b1f3-a2b30866a29d" />
+
+Secondly, for all the patient histories in the data set we calculate the probability of a suicide attempt. Then based on the agent's decision which, depends on a threshold, we claissify it as a 1 if the agent decides the patient should be put on suicide watch or 0 else.
+<img width="459" alt="image" src="https://github.com/user-attachments/assets/c5cd4fb0-974a-4c06-bad9-f6c0c1203e6c" />
 
 
 
