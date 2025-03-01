@@ -117,12 +117,39 @@ We tested accuracy by calculating the probability of a suicide attempt for all t
 Firt we extracted the suicide attempt values from the data frame: <br>
 <img width="469" alt="image" src="https://github.com/user-attachments/assets/eb27d45e-af0c-4d0c-b1f3-a2b30866a29d" />
 
-Secondly, for all the patient histories in the data set we calculate the probability of a suicide attempt. Then based on the agent's decision which, depends on a threshold, we claissify it as a 1 if the agent decides the patient should be put on suicide watch or 0 else.
+Secondly, for all the patient histories in the data set we calculate the probability of a suicide attempt. Then based on the agent's decision which, depends on a threshold, we claissify it as a 1 if the agent decides the patient should be put on suicide watch or 0 else.<br>
+
 <img width="459" alt="image" src="https://github.com/user-attachments/assets/c5cd4fb0-974a-4c06-bad9-f6c0c1203e6c" />
 
 Then we compare the number of predictions our agen predicted correctly, and calculate the accuracy based on that number. <br>
 
-<img width="455" alt="image" src="https://github.com/user-attachments/assets/8d4858de-86ad-475b-8cf3-fc01fc629e88" />
+<img width="455" alt="image" src="https://github.com/user-attachments/assets/8d4858de-86ad-475b-8cf3-fc01fc629e88" /> <br>
+
+With a threshold of 70%, the accuracy is as follows: <br>
+<img width="109" alt="image" src="https://github.com/user-attachments/assets/b8a64f74-027d-45cc-a03f-6b6943af28cc" />
+
+With athreshold of 60%: <br>
+<img width="123" alt="image" src="https://github.com/user-attachments/assets/d39ce7cb-be94-42ed-9faa-6499539b662e" />
+
+With a threshold of 40%: <br>
+<img width="98" alt="image" src="https://github.com/user-attachments/assets/e7805dde-a38f-4c82-8dd5-93a79f126d07" />
+
+With a threshold of 30%: <br>
+<img width="115" alt="image" src="https://github.com/user-attachments/assets/03e044ee-ce19-4e3f-89c0-945c8221ffd9" />
+
+## Precision vs Recall
+
+<img width="418" alt="image" src="https://github.com/user-attachments/assets/a969c044-f491-4ebd-8c0d-a9819f31d6d2" /> <br>
+
+<img width="402" alt="image" src="https://github.com/user-attachments/assets/edf57a60-8fc1-45c3-845e-02b322e07e5e" /> <br>
+
+Due to the serious consequences of having missed cases of suicide attempts, we don't mind sacrificing a low precision for a high recall score. In the case of a 30% threshold, we get a recall score of 100% and a precision of 8.84%. Then we have the following measurements: <br>
+
+- 40% threshold gives recall of 100% and precision of 8.87%
+- 60% threshold gives recall of 100% and precision of 14.7%
+- 70% threshold gives recall of 99.3% and precision of 27.34%
+
+A 60% threshold is the threshols with the highest precision that has a recall of 100%, which is ideal for this context. Thus, we decide on a threshold of 60%.
 
 ## What's next
 
