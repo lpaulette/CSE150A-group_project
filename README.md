@@ -44,6 +44,15 @@ The variables we're considernig are as follows:
 
 We used the EM algorithm that's in HW3 to calculate the independent probability  p_i  for each feature x_i.
 
+In the Expectation-Maximization (EM) algorithm, we aim to estimate the Conditional Probability Tables (CPTs), specifically the causal influence probabilities θi of each feature Xi on the outcome Y.
+
+We are computing the probabilities: P(Y = 1 | X1, X2, ..., Xn)
+Where, with the Noisy-OR algorithm we get:
+<img width="226" alt="image" src="https://github.com/user-attachments/assets/553d35ba-3e28-42ed-8f16-c5738597abae" />
+
+Each θi represents how much Xi contributes to Y = 1.
+
+
 ## Challenges
 We had to divide certain features into categories to turn them into binary variables. Specifically, these features were:
 - Age - divided into 3 binary variables ->
