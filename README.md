@@ -42,15 +42,16 @@ The variables we're considernig are as follows:
 
 ## Methods
 
-We used the EM algorithm that's in HW3 to calculate the independent probability  p_i  for each feature x_i.
-
-In the Expectation-Maximization (EM) algorithm, we aim to estimate the Conditional Probability Tables (CPTs), specifically the causal influence probabilities θi of each feature Xi on the outcome Y.
-
-We are computing the probabilities: P(Y = 1 | X1, X2, ..., Xn)
-Where, with the Noisy-OR algorithm we get:
+We are computing the probabilities: P(Y = 1 | X1, X2, ..., Xn)\
+Where each patient has the binary features X1,..., Xn and corresponding parameters pi
+, with the Noisy-OR algorithm we get:
 <img width="226" alt="image" src="https://github.com/user-attachments/assets/553d35ba-3e28-42ed-8f16-c5738597abae" />
 
-Each θi represents how much Xi contributes to Y = 1.
+Each pi represents the entry in the CPT where the outcome (suicide attempt) depends on multiple parent nodes(risk factors); the probability that each individual risk factor, when present, will contribute to the suicide attempt. Here the noisy OR assumption lets the model capture the effect of each risk factor independently. By assuming independence, the model only needs one parameter risk factos and simplifies the computation and interpretation of the conditional probabilities when compared to a full CPT. 
+
+The CPT's that we are considering including but not limited to Age Categories: 18-30, 31-50, 51-80, Education Levels: primary, middle school, high school, university, postgrad, Marital Status: single, married, divorced, widowed, Occupation: unemployed, employed, retired, student and so forth.
+
+The EM algorith is used to iteratively update these parameters. During the E-step, the algorithm estimates the contribution (responsibility) of each risk factor to the observed outcome. Then during the M-step, it updates the pi values based on these estimates. This gives the final pi values which serve as simplified CPT entries that demonstrate the influence of each risk factor on the suicide attempt probabilities. Thus, "learning" the CPT entries that would best explain the data. 
 
 
 ## Challenges
