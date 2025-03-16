@@ -11,6 +11,8 @@ Service request patterns (Same service rate, SYN error rate, REJ error rate)
 User authentication failures (Failed logins)
 Host compromise indicators (Compromised machine count)
 The agent will learn conditional probability distributions (CPDs) of these network features and compute: <br/>
-*𝑃(intrusion ∣ network sample)*
+
+*𝑃(intrusion ∣ network sample)* <br/>
+
 If the probability exceeds a threshold, the agent will classify the sample as an intrusion and identify its most likely attack type (DoS, Probe, R2L, U2R).
 
