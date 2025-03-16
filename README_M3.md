@@ -51,78 +51,78 @@ They represent core network anomalies that cover different attack types:
 They are interpretable and directly measurable. These features come from packet-level or session-level statistics, making them easily observable in a real-time system.<br/>
 They also avoid redundancy while maximizing attack coverage. Features like dst_host_srv_count might be useful, but they correlate highly with same_srv_rate, so only one is needed.<br/>
 
-__*src_bytes: *__ number of data bytes from source to destination.
+__*src_bytes:*__ number of data bytes from source to destination.
  - Low src_bytes are common in probe attacks, where a system aims to gather information from the target by seding small packets.
  - High src_bytes are commin in DoS attacks, where a system floods the target with massive amount of data.<br/>
  
-__*dst_bytes: *__ number of data bytes from destination to source<br/>
+__*dst_bytes:*__ number of data bytes from destination to source<br/>
  - Low dst_bytes are common in DoS attacks, since the victim often doesn't respond (SYN flood).<br/>
  
-__*same_srv_rate: *__ % of connections to the same service. <br/>
+__*same_srv_rate:*__ % of connections to the same service. <br/>
  - Very low same_srv_rate may indicate scanning behavior from a probe attack.<br/>
  
-__*serror_rate: *__ % of connections that have SYN errors. <br/>
+__*serror_rate:*__ % of connections that have SYN errors. <br/>
  - High serror_rate might indicate a SYN flood attack, which is a type of DoS.<br/>
  
-__*rerror_rate: *__ % of connections that have REJ errors (connection attempts refused by the destination). <br/>
+__*rerror_rate:*__ % of connections that have REJ errors (connection attempts refused by the destination). <br/>
  - High rerror_rate may indicate port scanning from a probe attack.<br/>
  
-__*num_failed_logins: *__ number of failed login attempts. <br/>
+__*num_failed_logins:*__ number of failed login attempts. <br/>
  - Very high num_failed_logins may indicate an attempt of a brute force attack, a type of R2L attack.<br/>
  
-__*num_compromised: *__ number of compromised conditions. <br/>
+__*num_compromised:*__ number of compromised conditions. <br/>
  - High num_compromised is the strongest indicator of an onging U2R attack. <br/>
 
 ### Why did we choose these features to affect U2R and not others?
 The three features we chose are directly related to privilege escalation, which is how U2R attacks.<br/>
 
-__*num_compromised: *__
+__*num_compromised:*__
  - A high num_compromised suggests a successful exploit that gained unauthorized access to system files.<br/>
  
-__*num_shells: *__ number of shell prompts started.
+__*num_shells:*__ number of shell prompts started.
  - U2R attacks often involve spawning a shell to execute root commands.<br/>
  
-__*root_shell: *__ whether a root shell was obtained.
+__*root_shell:*__ whether a root shell was obtained.
  - Root access means complete takeover. If root_shell = 1, then U2R might've been successful already.<br/>
 
  ### Why did we choose these features to affect DoS and not others?
  Denial-of-Service attacks aim to overwhelm a system by sending excessive traffic, preventing legitimate users from accessing services. The selected features correlate to DoS attack patterns because they capture high traffic volume and repeated failed connection attempts.<br/>
 
- __*serror_rate: *__ 
+ __*serror_rate:*__ 
   - Dos attacks often send large numbers of SYN requests without completing connections, leading to a high serror_rate.<br/>
 
- __*count: *__ Number of connections from the same source within a short time.
+ __*count:*__ Number of connections from the same source within a short time.
   - DoS attacks typically generate rapid, repeated connection attempts, resulting in a high count value compared to normal traffic. <br/>
 
- __*srv_count: *__ 	Number of connections to the same service.
+ __*srv_count:*__ 	Number of connections to the same service.
   - Many DoS attacks target a specific service, repeatedly sending requests to crash it. High srv_count suggests a single-service DoS attack.<br/>
 
 ### Why did we choose these features to affect probe and not others?
 Probe attacks work by gathering information by sending different types of requests and analyzing responses.<br/>
 
-__*same_srv_rate: *__
+__*same_srv_rate:*__
  - Low same_srv_rate suggests scanning behavior. The attacker tries many services, unlike normal traffic, which often connects to the same service.<br/>
 
-__*diff_srv_rate: *__ the percentage of connections using different services.
+__*diff_srv_rate:*__ the percentage of connections using different services.
  - High diff_srv_rate is a strong indicator of probing multiple services The attackers look for open ports across different protocols.<br/>
 
-__*srv_diff_host_rate: *__ the percentage of connections to different hosts for the same service.
+__*srv_diff_host_rate:*__ the percentage of connections to different hosts for the same service.
  - High srv_diff_host_rate suggests the attacker is scanning multiple machines looking for vulnerable hosts.<br/>
 
-__*rerror_rate: *__
+__*rerror_rate:*__
  - High rerror_rate suggests many failed access attempts, which is common in Probe attacks trying to access closed or protected services.<br/>
 
 ### Why did we choose these features to affect R2L and not others?
 A Remote-to-Local (R2L) attack happens when an external attacker gains unauthorized access to a local machine. These attacks often involve brute-force login attempts or exploiting misconfigured services to steal sensitive data.<br/>
 
-__*num_failed_logins: *__ 
+__*num_failed_logins:*__ 
  - Brute-force attacks cause high num_failed_logins, since the attacker repeatedly tries different passwords.<br/>
 
-__*logged_in: *__ this feature indicates whether the session is authenticated.
+__*logged_in:*__ this feature indicates whether the session is authenticated.
  - A successful R2L attack will eventually set logged_in = 1 after many failed attempts.<br/>
 
 
-__*num_access_files: *__ this feature indicates the number of sensitive files accessed in he session.
+__*num_access_files:*__ this feature indicates the number of sensitive files accessed in he session.
  - If an attacker successfully logs in, they will attempt to steal data, leading to a high num_access_files count.<br/>
  
 # Sources
