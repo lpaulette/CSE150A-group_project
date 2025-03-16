@@ -66,13 +66,13 @@ __*num_compromised:*__ number of compromised conditions. <br/>
  - High num_compromised is the strongest indicator of an onging U2R attack. <br/>
 
 ### Why did we choose these features to affect U2R and not others?
-The three features we chose are directly related to privilege escalation, which is how U2R attacks.
+The three features we chose are directly related to privilege escalation, which is how U2R attacks.<br/>
 __*num_compromised:*__
- - A high num_compromised suggests a successful exploit that gained unauthorized access to system files.
+ - A high num_compromised suggests a successful exploit that gained unauthorized access to system files.<br/>
 __*num_shells:*__ number of shell prompts started.<br/>
- - U2R attacks often involve spawning a shell to execute root commands.
+ - U2R attacks often involve spawning a shell to execute root commands.<br/>
 __*root_shell:*__ whether a root shell was obtained.<br/>
- - Root access means complete takeover. If root_shell = 1, then U2R might've been successful already.
+ - Root access means complete takeover. If root_shell = 1, then U2R might've been successful already.<br/>
  
  
 # Sources
