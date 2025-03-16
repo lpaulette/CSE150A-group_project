@@ -35,7 +35,7 @@ If the probability exceeds a threshold, the agent will classify the sample as an
  - __*Remote-to-Local (R2L)*__ is the attempt to gain illegal access to a system’s account by exploiting its vulnerabilities.
  - __*User-to-Root (U2R)*__ occurs when a user tries to gain super user privilege .
 
-## Bayesian Network Structure<br/>
+## Bayesian Network Setup<br/>
 ![EM algorithm](https://github.com/user-attachments/assets/9584d8b5-9c06-4a13-80af-2f130ada95dd)<br/>
 
 ### Why did we choose these features to affect intrusion and not others?
@@ -124,7 +124,13 @@ __*logged_in:*__ this feature indicates whether the session is authenticated.
 
 __*num_access_files:*__ this feature indicates the number of sensitive files accessed in he session.
  - If an attacker successfully logs in, they will attempt to steal data, leading to a high num_access_files count.<br/>
- 
+
+# Data preprocessing
+
+# Training setup
+
+if you used a library like pgmpy, etc., be sure to explain what it does. Then, cite your source (library homepage link or documentation is sufficient) at the bottom of your README.md file.
+
 # Sources
  - https://www.sciencedirect.com/science/article/pii/S1877050918301637/pdf?md5=01cd358af58d0786a80be6fb0b09e310&pid=1-s2.0-S1877050918301637-main.pdf
  - https://kdd.ics.uci.edu/databases/kddcup99/task.html
