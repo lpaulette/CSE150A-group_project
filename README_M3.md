@@ -1,3 +1,6 @@
+# Probabilistic Agent code
+https://colab.research.google.com/drive/1kug9L71UTLJ-ZIk268No6ggnFMnl46f2?usp=sharing
+
 # Abstract
 This probabilistic agent will detect anomalies in network traffic using a Bayesian Network Model trained with Maximum Likelihood Estimation (MLE). The agent will assign probability scores to network flows and classify them as "normal" or "attack" based on learned probabilistic dependencies.
 
@@ -33,22 +36,47 @@ If the probability exceeds a threshold, the agent will classify the sample as an
  - __*User-to-Root (U2R)*__ occurs when a user tries to gain super user privilege .
 
 ## Bayesian Network Structure<br/>
-### src_bytes: number of data bytes from source to destination.<br/>
+### Why did we choose these features to affect intrusion and not others?
+The features were chosen because they provide the strongest separation between normal and attack traffic:
+
+They represent core network anomalies that cover different attack types:
+
+ - DoS attacks → src_bytes, dst_bytes, serror_rate
+ - Probe attacks → same_srv_rate, rerror_rate
+ - R2L attacks → num_failed_logins
+ - U2R attacks → num_compromised
+
+They are interpretable and directly measurable. These features come from packet-level or session-level statistics, making them easily observable in a real-time system.<br/>
+They also avoid redundancy while maximizing attack coverage. Features like dst_host_srv_count might be useful, but they correlate highly with same_srv_rate, so only one is needed.<br/>
+
+__*src_bytes:*__ number of data bytes from source to destination.<br/>
  - Low src_bytes are common in probe attacks, where a system aims to gather information from the target by seding small packets.
  - High src_bytes are commin in DoS attacks, where a system floods the target with massive amount of data.
-### dst_bytes: number of data bytes from destination to source<br/>
+__*dst_bytes:*__ number of data bytes from destination to source<br/>
  - Low dst_bytes are common in DoS attacks, since the victim often doesn't respond (SYN flood).
-### same_srv_rate: % of connections to the same service. <br/>
+__*same_srv_rate:*__ % of connections to the same service. <br/>
  - Very low same_srv_rate may indicate scanning behavior from a probe attack.
-### serror_rate: % of connections that have SYN errors. <br/>
+__*serror_rate:*__ % of connections that have SYN errors. <br/>
  - High serror_rate might indicate a SYN flood attack, which is a type of DoS.
-### rerror_rate: % of connections that have REJ errors (connection attempts refused by the destination). <br/>
+__*rerror_rate:*__ % of connections that have REJ errors (connection attempts refused by the destination). <br/>
  - High rerror_rate may indicate port scanning from a probe attack.
-### num_failed_logins: number of failed login attempts. <br/>
+__*num_failed_logins:*__ number of failed login attempts. <br/>
  - Very high num_failed_logins may indicate an attempt of a brute force attack, a type of R2L attack.
-### num_compromised: number of compromised conditions. <br/>
+__*num_compromised:*__ number of compromised conditions. <br/>
  - High num_compromised is the strongest indicator of an onging U2R attack. <br/>
- 
 
+### Why did we choose these features to affect U2R and not others?
+The three features we chose are directly related to privilege escalation, which is how U2R attacks.
+__*num_compromised:*__
+ - A high num_compromised suggests a successful exploit that gained unauthorized access to system files.
+__*num_shells:*__ number of shell prompts started.<br/>
+ - U2R attacks often involve spawning a shell to execute root commands.
+__*root_shell:*__ whether a root shell was obtained.<br/>
+ - Root access means complete takeover. If root_shell = 1, then U2R might've been successful already.
+ 
+ 
+# Sources
+ - https://www.sciencedirect.com/science/article/pii/S1877050918301637/pdf?md5=01cd358af58d0786a80be6fb0b09e310&pid=1-s2.0-S1877050918301637-main.pdf
+ - https://kdd.ics.uci.edu/databases/kddcup99/task.html
 
 
