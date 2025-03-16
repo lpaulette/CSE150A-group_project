@@ -36,6 +36,8 @@ If the probability exceeds a threshold, the agent will classify the sample as an
  - __*User-to-Root (U2R)*__ occurs when a user tries to gain super user privilege .
 
 ## Bayesian Network Structure<br/>
+![EM algorithm](https://github.com/user-attachments/assets/9584d8b5-9c06-4a13-80af-2f130ada95dd)<br/>
+
 ### Why did we choose these features to affect intrusion and not others?
 The features were chosen because they provide the strongest separation between normal and attack traffic:
 
@@ -73,6 +75,7 @@ __*num_compromised:*__ number of compromised conditions. <br/>
 
 ### Why did we choose these features to affect U2R and not others?
 The three features we chose are directly related to privilege escalation, which is how U2R attacks.<br/>
+
 __*num_compromised:*__
  - A high num_compromised suggests a successful exploit that gained unauthorized access to system files.<br/>
  
