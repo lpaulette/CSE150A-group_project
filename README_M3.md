@@ -43,9 +43,9 @@ __*Sensors:*__ The agent observes network traffic features from the dataset, inc
  - High num_compromised is the strongest indicator of an onging U2R attack. <br/>
  
 ## Attack Types
- - Probe attacks are aimed at gathering information about the target network from a source that is often external to the network.
- - Denial-of-Service (DoS) attacks results in an interruption of the service by flooding the target system with illegitimate requests.
- - Remote-to-Local (R2L) is the attempt to gain illegal access to a system’s account by exploiting its vulnerabilities.
- - User-to-Root (U2R) occurs when a user tries to gain super user privilege .
+ - __*Probe attacks*__ are aimed at gathering information about the target network from a source that is often external to the network.
+ - __*Denial-of-Service (DoS)*__ attacks results in an interruption of the service by flooding the target system with illegitimate requests.
+ - __*Remote-to-Local (R2L)*__ is the attempt to gain illegal access to a system’s account by exploiting its vulnerabilities.
+ - __*User-to-Root (U2R)*__ occurs when a user tries to gain super user privilege .
 
 
