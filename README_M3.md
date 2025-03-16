@@ -5,11 +5,12 @@ We will use the KDD Cup 1999 dataset: http://kdd.ics.uci.edu/databases/kddcup99/
 
 The Bayesian Network will analyze the following network traffic features to determine intrusion likelihood:
 
-Packet size (Source and destination bytes)
-Connection duration
-Service request patterns (Same service rate, SYN error rate, REJ error rate)
-User authentication failures (Failed logins)
-Host compromise indicators (Compromised machine count)
+ - Packet size (Source and destination bytes)
+ - Connection duration
+ - Service request patterns (Same service rate, SYN error rate, REJ error rate)
+ - User authentication failures (Failed logins)
+ - Host compromise indicators (Compromised machine count) <br/>
+ 
 The agent will learn conditional probability distributions (CPDs) of these network features and compute: <br/>
 
 *𝑃(intrusion ∣ network sample)* <br/>
