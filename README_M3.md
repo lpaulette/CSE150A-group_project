@@ -172,6 +172,38 @@ This approach allows the Bayesian Network to learn relationships between feature
 
 # Results
 
+We measured accuracy by comparing the probability *P( intrusion | network sample)* calculated from 1000 samples from the dataset and comparing them to the actual intrusion feature. 
+<img width="391" alt="image" src="https://github.com/user-attachments/assets/36a7f719-86f2-4393-b124-515cf35091d1" /><br/>
+
+<img width="329" alt="image" src="https://github.com/user-attachments/assets/6240890e-2f05-44a8-9efd-370233e84ad0" /><br/>
+
+Our model accuracy was 98.60%.<br/>
+
+This means 98.6% of the model’s predictions matched the actual labels (intrusion or normal).
+
+## Challenges
+The dataset contains a lot of normal network samples, compared to attack samples. The model could predict "normal" all the time and still achieve high accuracy.<br/>
+<img width="209" alt="image" src="https://github.com/user-attachments/assets/b12825e1-d4d6-48b5-b0ef-3f4a1950d9d7" />
+
+To further understand the performance, we printed a confusion matrix:<br/>
+
+<img width="344" alt="image" src="https://github.com/user-attachments/assets/ef960d55-7004-4450-a696-42e685d04b25" />
+
+ - True Positives = 797 correctly identifies intrusions.
+ - True Negatives = 189 Correctly identified normal traffic.
+ - False Positives = 11 normal samples were incorrectly predicted as intrusions.
+ - False Negatives = 3 intrusion samples were missed
+
+The takeaway from these results is that the model is highly accurate. We believe because of how well GMM categorized the data.<br/>
+
+We also decided to get a classification report, in case we were missing anything. <br/>
+
+<img width="419" alt="image" src="https://github.com/user-attachments/assets/d5ef677b-3d02-4633-bc75-9b554b52369c" /><br/>
+
+Based on the 0.98 and 0.99 scores for precision, we know the model rarely misclassifies normal network traffic as intrusion, and viceversa.<br/>
+Based on the 0.94 and 1.00 recall scores we know intrusions are rarely missed, but some normal traffic is classified as intrusion.<br/>
+The model is highly accurate overall.
+
 # What's next
 
 # Sources
