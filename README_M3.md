@@ -18,10 +18,6 @@ The agent will learn conditional probability distributions (CPDs) of these netwo
 
 *𝑃 (intrusion ∣ network sample)* <br/>
 
-If the probability exceeds a threshold, the agent will classify the sample as an intrusion and identify its most likely attack type (DoS, Probe, R2L, U2R). It will do this by choosing the highest conditiona probability: <br/>
-
-*P (attack type | intrusion)* <br/>
-
 ## PEAS: <br/>
  - __*Performance:*__ The agent is evaluated based on Accuracy, False Positive Rate (FPR), False Negative Rate (FNR). High accuracy and low FPR/FNR indicate an effective model. <br/>
  - __*Environment:*__ The agent operates in a network security environment, analyzing real-time or historical network traffic logs. The dataset includes both normal and attack traffic patterns from KDD99. <br/>
@@ -205,6 +201,15 @@ Based on the 0.94 and 1.00 recall scores we know intrusions are rarely missed, b
 The model is highly accurate overall.
 
 # What's next
+
+While the current Bayesian Network effectively detects whether network traffic is normal or an attack, it can be further enhanced to distinguish between different attack types (DoS, Probe, R2L, U2R).
+To accurately classify attack types, the Bayesian Network should be structured to model the dependencies between intrusion detection and specific attack categories.
+
+ - Currently, the model only predicts whether traffic is an intrusion.
+ - The improved model will introduce attack type nodes (DoS, Probe, R2L, U2R) that are conditionally dependent on intrusion.
+ - Additional dependencies between network features and specific attack types should be established, ensuring that relevant features influence the corresponding attack types.
+
+Different types of attacks exhibit distinct behavioral patterns, so selecting the right features for each attack type is crucial.<br/>
 
 # Sources
  - https://www.sciencedirect.com/science/article/pii/S1877050918301637/pdf?md5=01cd358af58d0786a80be6fb0b09e310&pid=1-s2.0-S1877050918301637-main.pdf
