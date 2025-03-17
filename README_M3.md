@@ -148,9 +148,10 @@ We reduced the size of the dataframe, to only contain the features that indicate
 
 We categorized the rest of the continuous features into categorical ones, as "low" to "very high", depending on the range of each feature.
 <img width="517" alt="image" src="https://github.com/user-attachments/assets/e5d51fee-fb4e-4aa0-8cae-2ed97831cfdd" /><br/>
+
 We avoided the features with too few unique variables, such as "logged_in" and "root_shell".<br/>
 
-<img width="530" alt="image" src="https://github.com/user-attachments/assets/23ba344d-e8f2-43f8-8610-58904115d43f" />
+<img width="530" alt="image" src="https://github.com/user-attachments/assets/23ba344d-e8f2-43f8-8610-58904115d43f" /><br/>
 
 
 
