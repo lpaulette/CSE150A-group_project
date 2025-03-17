@@ -172,7 +172,7 @@ This approach allows the Bayesian Network to learn relationships between feature
 
 # Results
 
-# What can be done
+# What's next
 
 # Sources
  - https://www.sciencedirect.com/science/article/pii/S1877050918301637/pdf?md5=01cd358af58d0786a80be6fb0b09e310&pid=1-s2.0-S1877050918301637-main.pdf
