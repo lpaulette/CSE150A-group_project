@@ -28,6 +28,10 @@ If the probability exceeds a threshold, the agent will classify the sample as an
  - __*Actuators:*__ The agent raises an alert when an intrusion is detected. It also classifies the attack type to help security teams respond appropriately. <br/>
  - __*Sensors:*__ The agent observes network traffic features from the dataset, including packet size, connection duration, service request patterns, TCP errors, login failures, and host compromise indicators.<br/>
 
+The dataset has 42 features, where 41 of them are network features, from protocol type (i.e. TCP), to dst_host_srv_rerror_rate. The 42nd feature is "label", which indicates whether the network sample is normal or an attack, with exactly which attack type.
+
+There are 23 unique attack types that fall into four main categories: DoS, R2L, U2R, and probing.
+
  ## Attack Types
  In order to build our Bayesian Network structure, first we need to understand how different attack types work. <br/>
  - __*Probe attacks*__ are aimed at gathering information about the target network from a source that is often external to the network.
@@ -126,6 +130,29 @@ __*num_access_files:*__ this feature indicates the number of sensitive files acc
  - If an attacker successfully logs in, they will attempt to steal data, leading to a high num_access_files count.<br/>
 
 # Data preprocessing
+
+First we categorized the attack types into one of the four main categories as follows:<br/>
+
+<img width="575" alt="image" src="https://github.com/user-attachments/assets/edb0e190-5152-4b4e-b71e-ed4a58b10783" /><br/>
+<img width="266" alt="image" src="https://github.com/user-attachments/assets/f6de3688-a43c-40d7-a5a7-f6762812db5b" />
+
+Then we used __*pd.get_dummies*__ to divide the "attack_category" feature into binary columns as follows:<br/>
+<img width="466" alt="image" src="https://github.com/user-attachments/assets/d71784d3-e92d-499e-900f-ced171a0c01f" /><br/>
+<img width="221" alt="image" src="https://github.com/user-attachments/assets/5b7105a3-713c-44bc-8ed1-c7ab08d09afb" />
+
+After that we create the feature "intrusion", which is True if there is an attack going on and False else.<br/>
+<img width="457" alt="image" src="https://github.com/user-attachments/assets/f9ad67c9-1502-4d1f-b81b-abdc3d22db97" /><br/>
+
+We reduced the size of the dataframe, to only contain the features that indicate any kind of network intrusion.
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/f058e92c-3335-4866-a214-91ebafccb1f9" /><br/>
+
+We categorized the rest of the continuous features into categorical ones, as "low" to "very high", depending on the range of each feature.
+<img width="517" alt="image" src="https://github.com/user-attachments/assets/e5d51fee-fb4e-4aa0-8cae-2ed97831cfdd" /><br/>
+We avoided the features with too few unique variables, such as "logged_in" and "root_shell".<br/>
+
+<img width="530" alt="image" src="https://github.com/user-attachments/assets/23ba344d-e8f2-43f8-8610-58904115d43f" />
+
+
 
 # Training setup
 
