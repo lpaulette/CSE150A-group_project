@@ -161,7 +161,18 @@ And finally "num_shells", which has 3 unique values:<br/>
 
 # Training setup
 
-if you used a library like pgmpy, etc., be sure to explain what it does. Then, cite your source (library homepage link or documentation is sufficient) at the bottom of your README.md file.
+First we defined the structure of the Bayesian Model.<br/>
+<img width="302" alt="image" src="https://github.com/user-attachments/assets/34e43e47-a14a-4c81-b500-8a8bb4f43ce9" /><br/>
+
+We used Maximum Likelihood Estimator to train the model.<br/>
+<img width="284" alt="image" src="https://github.com/user-attachments/assets/03465729-cde6-4e90-b819-942bb5edac3b" />
+
+The MaximumLikelihoodEstimator is used to train the BayesianNetwork. It estimates the conditional probability distributions (CPDs) by counting occurrences of feature values in the dataset.
+This approach allows the Bayesian Network to learn relationships between features and intrusion probability based on real network traffic patterns.
+
+# Results
+
+# What can be done
 
 # Sources
  - https://www.sciencedirect.com/science/article/pii/S1877050918301637/pdf?md5=01cd358af58d0786a80be6fb0b09e310&pid=1-s2.0-S1877050918301637-main.pdf
