@@ -146,10 +146,11 @@ After that we create the feature "intrusion", which is True if there is an attac
 We reduced the size of the dataframe, to only contain the features that indicate any kind of network intrusion.
 <img width="524" alt="image" src="https://github.com/user-attachments/assets/f058e92c-3335-4866-a214-91ebafccb1f9" /><br/>
 
-We categorized the rest of the continuous features into categorical ones, as "low" to "very high", depending on the range of each feature.
-<img width="517" alt="image" src="https://github.com/user-attachments/assets/e5d51fee-fb4e-4aa0-8cae-2ed97831cfdd" /><br/>
+We categorized the rest of the continuous features into categorical ones, as "very low" to "very high", depending on the range of each feature. We used GMM to categorize the values into probability-based bins.
+<img width="389" alt="image" src="https://github.com/user-attachments/assets/febee4cc-d74b-4c4b-923e-4dc32e72a1bc" />
+<br/>
 
-We avoided the features with too few unique variables, such as "logged_in" and "root_shell".<br/>
+We avoided the features with too few unique variables, such as "num_shells", "logged_in" and "root_shell".<br/>
 
 <img width="530" alt="image" src="https://github.com/user-attachments/assets/23ba344d-e8f2-43f8-8610-58904115d43f" /><br/>
 
