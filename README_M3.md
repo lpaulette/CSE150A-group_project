@@ -152,14 +152,11 @@ We categorized the rest of the continuous features into categorical ones, as "ve
 
 We avoided the features with too few unique variables, such as "num_shells", "logged_in" and "root_shell".<br/>
 
-<img width="530" alt="image" src="https://github.com/user-attachments/assets/23ba344d-e8f2-43f8-8610-58904115d43f" /><br/>
-
 Then we categorize the binary features:<br/>
 <img width="536" alt="image" src="https://github.com/user-attachments/assets/5dcf35b4-03d4-496f-955f-5e2e4263fd0b" /><br/>
 
 And finally "num_shells", which has 3 unique values:<br/>
 <img width="555" alt="image" src="https://github.com/user-attachments/assets/15d1acfc-7e06-4dc4-b566-43d98c2bbcd3" />
-
 
 
 # Training setup
